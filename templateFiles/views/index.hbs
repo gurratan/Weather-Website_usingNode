@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Home Page</title>
+    <link rel="icon" href="img/cloudimg.png">
+    <link rel="stylesheet" href="css/styles.css">
+ 
+</head>
+<body>
+    <div class="maincontent">
+    {{>header}}
+    <p> {{title}} from HBS file designed by {{name}}</p>
+    <form>
+        <input>
+        <button>Search</button>
+        <p id='message-1'></p>
+        <p id = 'message-2'></p>
+    </form>
+    </div>
+
+  
+{{>footer}}
+   <script src ="./js/app.js"></script>
+</body>
+</html>
