@@ -5,6 +5,8 @@ const app = express()
 const geocode = require('./utills/geocode')
 const forcast = require('./utills/forecast')
 
+const port= process.env.PORT || 3000
+
 // Define path for Express configs 
 const publicDirPath = path.join(__dirname, '../public')
 const viewDir = path.join(__dirname, '../templateFiles/views')
@@ -90,6 +92,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server started .. !! on port 3000')
+app.listen(port, () => {
+    console.log('Server started .. !! on port :'+port)
 })
