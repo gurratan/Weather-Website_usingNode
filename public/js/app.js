@@ -16,7 +16,8 @@ weatherForm.addEventListener('submit',(e)=>{
         }else{
             console.log(data.location)
             messageOne.textContent= data.location
-            messageTwo.textContent = 'Temperature :'+data.Temperature + ' , Rain chances are : ' + data.Rain_Chance
+            messageTwo.textContent = 'Temperature :'+data.Temperature + ' , Precipitation : ' + data.Rain_Chance + 'cm ,'+data.weather_desp +' , Wind Speed : '+data.wind_speed+ ' , Feels Like : ' +data.feelslike
+        //
         }
     })
 })

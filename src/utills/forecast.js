@@ -13,7 +13,11 @@ const forcast=(longitute,latitude,callback)=>{
         }else{
             callback(undefined,{
                 Temperature:body.current.temperature,
-                Rain_Chance: body.current.precip
+                Rain_Chance: body.current.precip,
+                weather_desp:body.current.weather_descriptions[0],
+                observation_time: body.current.observation_time,
+                wind_speed : body.current.wind_speed,
+                feelslike : body.current.feelslike
             })
         }
     }

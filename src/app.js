@@ -70,14 +70,18 @@ app.get('/weather', (req, res) => {
                 error : ' Please provide the valid address..!! '
             })
         }
-        forcast(latitude, longitude, (error, {Temperature,Rain_Chance}={}) => {
+        forcast(latitude, longitude, (error, {Temperature,Rain_Chance,weather_desp,observation_time,wind_speed,feelslike}={}) => {
             if (error) {
                 return console.log(error)
             }
             res.send({
                 location:location,
                 Temperature:Temperature,
-                Rain_Chance:Rain_Chance
+                Rain_Chance:Rain_Chance,
+                weather_desp: weather_desp,
+                observation_time: observation_time,
+                wind_speed: wind_speed,
+                feelslike:feelslike
             })
 
         })
